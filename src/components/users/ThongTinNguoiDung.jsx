@@ -64,7 +64,7 @@ class ThongTinNguoiDung extends Component {
         })
         return (
             <div>
-                <h1>THÔNG TIN CÁ NHẤN</h1>
+                <h1>THÔNG TIN CÁ NHÂN</h1>
                 {
 					// errors.dangKy === false ?
 					// <Alert color="danger" >

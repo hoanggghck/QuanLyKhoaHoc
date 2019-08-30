@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Form, FormGroup, Label, Input, Button, Alert } from 'reactstrap';
+import { Alert } from 'reactstrap';
 import { dangNhap } from '../../actions/nguoiDung';
 import { connect } from 'react-redux';
 import '../../css/user/DangNhap.css'
@@ -71,7 +71,7 @@ class DangNhap extends Component {
 
 
 					<div className="wrap-login100 ">
-					<span class="login100-form-title p-b-51 mb-4">
+					<span className="login100-form-title p-b-51 mb-4">
 						Đăng Nhập
 					</span>
 						<form className="login100-form validate-form flex-sb flex-w"

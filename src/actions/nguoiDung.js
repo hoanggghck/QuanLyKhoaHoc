@@ -19,6 +19,7 @@ export const dangNhap = (data, history) => {
                         nguoiDung: res.data[0]
                     })
                     localStorage.setItem('NguoiDung',JSON.stringify(res.data[0]))
+                    localStorage.setItem('MaLozi',JSON.stringify(res.data[0].MaLoaiNguoiDung))
                     history.push("/dskh")
                 }
             })
@@ -85,4 +86,22 @@ export const capNhatThongTin = (data) => {
                 dispatch(layErrors("LAY_ERRORS_CAP_NHAT_THONG_TIN", err))
             })
     }
+}
+export const xoaUser = (id) => {
+    
+    return (dispatch) => {
+        axios
+            .delete(`api/QuanLyTrungTam/XoaNguoiDung/${id}`)
+            .then(
+              
+                dispatch({
+                    type: "XOA",
+                    
+                })
+            )
+            .catch(err => {
+                dispatch(layErrors("LAY_ERRORS_CAP_NHAT_THONG_TIN", err))
+            })
+    }
+   
 }

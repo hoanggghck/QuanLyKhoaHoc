@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { Container, Row } from 'reactstrap';
-import hienThi from '../actions/khoaHoc'
+import { Link } from 'react-router-dom';
+import '../../css//khoaHoc/DanhSachKhoaHoc.css';
 /* components */
 import KhoaHoc from './KhoaHoc'
 
@@ -13,6 +14,7 @@ class DanhSachKhoaHoc extends Component {
     }
   }
 
+ 
 
   componentDidMount() {
     axios
@@ -25,7 +27,9 @@ class DanhSachKhoaHoc extends Component {
       .catch(console.log)
   }
 
+
   render() {
+    
     const khoaHoc = this.state.dskh.map((khoa, index) => {
       return <KhoaHoc
         key={index}
@@ -33,10 +37,11 @@ class DanhSachKhoaHoc extends Component {
       />
     })
     return (
-      <div>
+      <div className="myListCourse">
         <h1>
           DANH SÁCH KHÓA HỌC
         </h1>
+        <button className="btn btn-success"><Link to='/admin'>EDIT</Link></button>
         <Container>
           <Row>
             {khoaHoc}

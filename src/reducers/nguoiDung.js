@@ -28,7 +28,11 @@ const nguoiDungReducer = (state = initialState, action) => {
                 ...state,
                 nguoiDung: action.nguoiDung
             }
-    
+        case "XOA":
+            return {
+                ...state,
+                nguoiDung: action.nguoiDung
+            }    
         default:
             break;
     }
