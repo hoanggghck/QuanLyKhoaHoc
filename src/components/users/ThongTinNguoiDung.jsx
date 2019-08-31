@@ -7,12 +7,12 @@ class ThongTinNguoiDung extends Component {
     constructor(props) {
 		super(props);
 		this.state = {
-			TaiKhoan: "",
-			MatKhau: "",
-			HoTen: "",
-            Email: "",
-            SoDT: "",
-            MaLoaiNguoiDung: "",
+                TaiKhoan: "",
+                MatKhau: "",
+                HoTen: "",
+                Email: "",
+                SoDT: "",
+                MaLoaiNguoiDung: "",
 
 		}
     }
@@ -30,6 +30,8 @@ class ThongTinNguoiDung extends Component {
     }
     
     componentDidMount() {
+        console.log(this.props.nguoiDung);
+        
         const {nguoiDung} = this.props.nguoiDung;
         const {TaiKhoan, HoTen, Email, SoDT, MaLoaiNguoiDung} = nguoiDung
         this.setState({
@@ -38,6 +40,7 @@ class ThongTinNguoiDung extends Component {
     }
     render() {
         // const { errors } = this.props
+        console.log(this.props.nguoiDung);
         
         const formInput = [
             {name: "TaiKhoan", type: "text", label: "tài khoản", disabled: true},

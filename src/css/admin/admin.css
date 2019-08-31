@@ -196,7 +196,9 @@ a.article, a.article:hover {
 .cogSetting{
     width: 50px;
 }
-
+.myPicker {
+    cursor: pointer;
+}
 
 /* ---------------------------------------------------
     CONTENT STYLE

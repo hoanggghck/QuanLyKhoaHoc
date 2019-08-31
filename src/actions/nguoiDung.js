@@ -79,7 +79,8 @@ export const capNhatThongTin = (data) => {
                 
                 dispatch({
                     type: "CAP_NHAT",
-                    nguoiDung: res.data
+                    nguoiDung: res.data,
+                    
                 })
             })
             .catch(err => {

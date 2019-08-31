@@ -10,6 +10,7 @@ import ThongTinNguoiDung from './components/users/ThongTinNguoiDung';
 import NotFound from './components/NotFound';
 import DangKy from './components/users/DangKy';
 import Admin from './components/admin/Admin';
+import test from './components/admin/test/test';
 function App() {
   return (
     <BrowserRouter>
@@ -21,6 +22,7 @@ function App() {
         <Route path="/dskh" exact component={DanhSachKhoaHoc} />
         <Route path="/nguoi-dung" exact component={ThongTinNguoiDung} />
         <Route path="/admin" exact component={Admin} />
+        <Route path="/test" exact component={test} />
 
 
         <Route path="/" component={NotFound} />
