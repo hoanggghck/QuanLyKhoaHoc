@@ -6,12 +6,10 @@ const initialState = {
 
 const khoaHocReducer = (state = initialState, action) => {
     switch (action.type) {
-        case "HIEN_THI":
-            // const newState = {...state};
-            // newState.nguoiDung = action.nguoiDung
+        case "CAP_NHAT":
             return {
                 ...state,
-                khoaHoc: action.khoaHoc,
+                khoaHoc: action.khoaHoc
             }
 
       

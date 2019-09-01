@@ -71,32 +71,32 @@ class DangNhap extends Component {
 
 
 					<div className="wrap-login100 ">
-					<span className="login100-form-title p-b-51 mb-4">
-						Đăng Nhập
+						<span className="login100-form-title p-b-51 mb-4">
+							Đăng Nhập
 					</span>
 						<form className="login100-form validate-form flex-sb flex-w"
-						onSubmit={this.onSubmit}
+							onSubmit={this.onSubmit}
 						>
 							<div className="wrap-input100 validate-input mb-2 " data-validate="Username is required">
-								<input 
-								className="input100"
-								 type="text" 
-								 name="taiKhoan" 
-								 id="taiKhoan" 
-								 placeholder="Nhập Tài Khoản" 
-								 onChange={this.onChange}
-								 />
+								<input
+									className="input100"
+									type="text"
+									name="taiKhoan"
+									id="taiKhoan"
+									placeholder="Nhập Tài Khoản"
+									onChange={this.onChange}
+								/>
 								<span className="focus-input100" />
 							</div>
 							<div className="wrap-input100 validate-input mb-4" data-validate="Password is required">
 								<input
-								 className="input100"
-								 type="password" 
-								 name="matKhau" 
-								 id="matKhau" 
-								 placeholder="Nhập Mật Khẩu" 
-								 onChange={this.onChange}
-								 />
+									className="input100"
+									type="password"
+									name="matKhau"
+									id="matKhau"
+									placeholder="Nhập Mật Khẩu"
+									onChange={this.onChange}
+								/>
 								<span className="focus-input100" />
 							</div>
 

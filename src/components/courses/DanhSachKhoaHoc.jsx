@@ -41,7 +41,6 @@ class DanhSachKhoaHoc extends Component {
         <h1>
           DANH SÁCH KHÓA HỌC
         </h1>
-        <button className="btn btn-success"><Link to='/admin'>EDIT</Link></button>
         <Container>
           <Row>
             {khoaHoc}

@@ -6,20 +6,7 @@ class KhoaHoc extends Component {
 	render() {
 		const { khoa } = this.props
 		return (
-			// <Col md={3} className="my-3">
-			// 	<Card className="myCard">
-			// 		<CardImg 
-			// 			top 
-			// 			width="100%" 
-			// 			src={khoa.HinhAnh} alt={khoa.TenKhoaHoc} />
-			// 		<CardBody className="text-left">
-			// 			<CardTitle>{khoa.TenKhoaHoc}</CardTitle>
-			// 			<CardText>Nguoi tao: {khoa.NguoiTao}</CardText>
-			// 			<CardText>Luot xem: {khoa.LuotXem}</CardText>
-			// 			<Button>Button</Button>
-			// 		</CardBody>
-			// 	</Card>
-			// </Col>
+			
 			<Col md={4} className="my-3">
 				<div className="wrapper">
 					<div className="container">
@@ -39,15 +26,17 @@ class KhoaHoc extends Component {
 						<div className="icon"><i className="fa fa-info"></i></div>
 						<div className="contents">
 							<tbody className="contents">
-								<tr>
+								<tr className="tr01">
 									<td>Người Tạo:</td>
+									<td>{khoa.NguoiTao}</td>
+								</tr>
+								<br/>
+								<tr className="tr01">
 									<td>Lượt Xem:</td>
+									<td>{khoa.LuotXem}</td>
 								</tr>
-								<tr>
-									<th>{khoa.NguoiTao}</th>
-									<th>{khoa.LuotXem}</th>
-								</tr>
-								<tr>
+								<br/>
+								<tr className="tr01">
 									<td>Mô Tả:</td>
 									<td>{khoa.MoTa}</td>
 								</tr>

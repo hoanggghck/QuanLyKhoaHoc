@@ -19,7 +19,6 @@ export const dangNhap = (data, history) => {
                         nguoiDung: res.data[0]
                     })
                     localStorage.setItem('NguoiDung',JSON.stringify(res.data[0]))
-                    localStorage.setItem('MaLozi',JSON.stringify(res.data[0].MaLoaiNguoiDung))
                     history.push("/dskh")
                 }
             })

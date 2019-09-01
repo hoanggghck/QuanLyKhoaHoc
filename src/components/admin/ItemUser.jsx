@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import Modal from './ModalPopup';
+import axios from 'axios';
 class ItemUser extends Component {
     constructor(props) {
         super(props);
         this.state = {
             showPopup: false,
-            user: {},
             TaiKhoan: "",
 			MatKhau: "",
 			HoTen: "",
@@ -20,6 +20,7 @@ class ItemUser extends Component {
                 showPopup: !this.state.showPopup  
         });  
          }  
+        
          componentDidMount(){
             this.setState({
                 TaiKhoan: this.props.user.TaiKhoan,
@@ -41,8 +42,8 @@ class ItemUser extends Component {
                <th>{user.Email}</th>
                <th>{user.SoDT}</th>
                <th>{user.TenLoaiNguoiDung}</th>
-                <th><button className="btn btn-danger" >Xóa</button>
-                <button className="btn btn-primary" onClick={this.togglePopup.bind(this)}>Edit</button>
+                <th><button className="btn btn_btn_red" >Xóa</button>
+                <button className="btn btn_btn_blue" onClick={this.togglePopup.bind(this)}>Edit</button>
                 </th>
               
                 {this.state.showPopup ?  

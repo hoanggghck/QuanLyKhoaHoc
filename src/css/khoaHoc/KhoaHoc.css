@@ -139,4 +139,14 @@
   .wrapper .inside .contents p {
     font-size: 13px;
   }
-  
+  .contents .tr01 td:first-child{
+    color: white;
+    
+  }
+  .contents .tr01 td:last-child{
+    color: #47C9AF;
+    font-weight: bold;
+  }
+  .tr01{
+    margin-bottom: 40px
+  }

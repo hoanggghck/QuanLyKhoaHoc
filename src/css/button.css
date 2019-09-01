@@ -1,0 +1,48 @@
+.btn_btn_blue {
+    border-radius: 5%;
+    padding: 6px 20px;
+    background-color: royalblue;
+    color: white;
+    border: 1px solid royalblue;
+    font-size: 15px;
+    font-weight: bold;
+    transition: all 1s
+}
+.btn_btn_blue:hover {
+    
+    background-color: white;
+    color: royalblue;
+    border: 1px solid royalblue;
+}
+.btn_btn_red {
+    border-radius: 5%;
+    padding: 6px 20px;
+    background-color: #bf404c;
+    color: white;
+    border: 1px solid #bf404c;
+    font-size: 15px;
+    font-weight: bold;
+    transition: all 1s
+}
+.btn_btn_red:hover {
+    
+    background-color: white;
+    color: #bf404c;
+    border: 1px solid #bf404c;
+}
+.btn_btn_green {
+    border-radius: 5%;
+    padding: 6px 20px;
+    background-color: #47C9AF;
+    color: white;
+    border: 1px solid #47C9AF;
+    font-size: 15px;
+    font-weight: bold;
+    transition: all 1s
+}
+.btn_btn_green:hover {
+    
+    background-color: white;
+    color: #47C9AF;
+    border: 1px solid #47C9AF;
+}

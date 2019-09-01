@@ -1,19 +1,19 @@
 import React, { Component } from 'react';
 import { Container, Form, FormGroup, Label, Input, Button, } from 'reactstrap';
-import { capNhatThongTin } from '../../actions/nguoiDung';
+import { capNhatThongTin } from '../../actions/khoaHoc';
 import { connect } from 'react-redux';
 import '../../css/admin/modal.css';
 import '../../css/button.css'
-class ModalPopup extends Component {
+class ModalPopupC extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            TaiKhoan: "",
-            MatKhau: "",
-            HoTen: "",
-            Email: "",
-            SoDT: "",
-            MaLoaiNguoiDung: "",
+            HinhAnh: "",
+            LuotXem: "",
+            MaKhoaHoc: "",
+            MoTa: "",
+            NguoiTao: "",
+            TenKhoaHoc: "",
             Componentstyle:{display:"block"},
 
         }
@@ -38,28 +38,27 @@ class ModalPopup extends Component {
     componentDidMount() {
 
         this.setState({
-            TaiKhoan: this.props.TaiKhoan,
-            MatKhau: this.props.MatKhau,
-            HoTen: this.props.HoTen,
-            Email: this.props.Email,
-            SoDT: this.props.SoDT,
-            MaLoaiNguoiDung: this.props.MaLoaiNguoiDung
+            HinhAnh: this.props.HinhAnh,
+            LuotXem: this.props.LuotXem,
+            MaKhoaHoc: this.props.MaKhoaHoc,
+            MoTa: this.props.MoTa,
+            NguoiTao: this.props.NguoiTao,
+            TenKhoaHoc: this.props.TenKhoaHoc
         })
     }
     render() {
         console.log(this.state);
-
+        
         const formInput = [
-            { name: "TaiKhoan", type: "text", label: "tài khoản", disabled: true },
-            { name: "MatKhau", type: "text", label: "mật khẩu", disabled: false },
-            { name: "HoTen", type: "text", label: "họ tên", disabled: false },
-            { name: "Email", type: "text", label: "email", disabled: false },
-            { name: "SoDT", type: "text", label: "số điện thoại", disabled: false },
-            { name: "MaLoaiNguoiDung", type: "text", label: "mã loại người dùng", disabled: true },
+            { name: "TenKhoaHoc", type: "text", label: "Tên Khóa Học", disabled: false },
+            { name: "NguoiTao", type: "text", label: "Người Tạo", disabled: false },
+            { name: "LuotXem", type: "text", label: "Lượt Xem", disabled: false },
+            { name: "MaKhoaHoc", type: "text", label: "Mã Khóa Học", disabled: true },
+            { name: "MoTa", type: "text", label: "Mô Tả", disabled: false },
+            { name: "HinhAnh", type: "text", label: "Hình Ảnh", disabled: false },
         ]
         const inputElm = formInput.map((input, index) => {
             return <FormGroup key={index}>
-                <Label for="taiKhoan"></Label>
                 <Input
                     className = "input1"
                     value={this.state[input.name]}
@@ -106,7 +105,7 @@ class ModalPopup extends Component {
 }
 const mapStateToProps = (state) => {
     return {
-        nguoiDung: state.nguoiDung
+        khoaHoc: state.khoaHoc
     }
 }
-export default connect(mapStateToProps, { capNhatThongTin })(ModalPopup);
+export default connect(mapStateToProps, { capNhatThongTin })(ModalPopupC);

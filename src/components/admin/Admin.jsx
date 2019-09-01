@@ -47,8 +47,7 @@ class Admin extends Component {
 
 
   render() {
-
-    var list
+      var list
     if (this.state.showTable === "2") {
       list = this.state.dskh.map((course, index) => {
         return <ItemCourse
@@ -82,7 +81,7 @@ class Admin extends Component {
                   onClick={this.changeTable}
                   name="1"
                 >
-                  <i class="fa fa-user"/>
+                  <i className="fa fa-user"/>
                   User
                     </a>
                 <a
@@ -108,10 +107,15 @@ class Admin extends Component {
                 <div className="card-header myCardHeader">
                   <div className="row">
                     <div className="col-md-6">
-                      <h3 className="text-left font-weight-bold">Danh sách nhân viên</h3>
+                      {this.state.showTable === "1" ? 
+                      (<h3 className="text-left font-weight-bold">Danh sách Người Dùng</h3>) 
+                      :(<h3 className="text-left font-weight-bold">Danh sách Khóa Học</h3>)}
                     </div>
                     <div className="col-md-6 text-right">
-                      <button className="btn btn-success" id="btnThem" data-toggle="modal" data-target="#myModal">Thêm nhân viên</button>
+                    {this.state.showTable === "1" ? 
+                      (<button className="btn btn_btn_green" ><Link to="/add" >Thêm người dùng</Link></button>) 
+                      :(<button className="btn btn_btn_green" ><Link to="/addC" >Thêm khóa học</Link></button>)}
+                      
                     </div>
                   </div>
                 </div>

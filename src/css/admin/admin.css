@@ -59,8 +59,8 @@ i, span {
 }
 
 #sidebar {
-    min-width: 250px;
-    max-width: 250px;
+    min-width: 150px;
+    max-width: 1500px;
     background: #47C9AF;
     color: #fff;
     transition: all 0.3s;
@@ -138,10 +138,7 @@ i, span {
     margin-right: 10px;
 }
 
-#sidebar ul li.active > a, a[aria-expanded="true"] {
-    color: #fff;
-    background: #47C9AF;
-}
+
 .myCardHeader h3{
     color: #47C9AF;
 }
@@ -207,7 +204,7 @@ a.article, a.article:hover {
     padding: 20px;
     min-height: 100vh;
     transition: all 0.3s;
-    width: 80%;
+    width: 90%;
 }
 
 
