@@ -12,6 +12,7 @@ import NotFound from './components/NotFound';
 import DangKy from './components/users/DangKy';
 import Admin from './components/admin/Admin';
 import AddC from './components/admin/AddC';
+import Pagination from './components/users/Pagination';
 function App() {
   return (
     <BrowserRouter>
@@ -25,7 +26,7 @@ function App() {
         <Route path="/admin" exact component={Admin} />
         <Route path="/add" exact component={Add} />
         <Route path="/addC" exact component={AddC} />
-
+        <Route path="/Pagination" exact component={Pagination} />
 
         <Route path="/" component={NotFound} />
       </Switch>

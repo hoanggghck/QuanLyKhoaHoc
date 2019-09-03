@@ -32,7 +32,7 @@ export const dangKy = (data, history) => {
                 }
             })
             .catch(err => {
-                dispatch(layErrors("LAY_ERRORS_DANG_KY", err))
+                dispatch(layErrors("LAY_ERRORS_KHOA_HOC", err))
             })
     }
 }

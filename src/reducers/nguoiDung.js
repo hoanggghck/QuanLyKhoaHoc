@@ -1,5 +1,6 @@
 const initialState = {
     nguoiDung: {},
+    listNguoiDung: [],
     daDangNhap: false
 }
                     // localStorage.setItem('NguoiDung',JSON.stringify(res.data[0]))
@@ -22,7 +23,12 @@ const nguoiDungReducer = (state = initialState, action) => {
                 nguoiDung: {},
                 daDangNhap: false
             }
-
+        
+        case "LAY_DANH_SACH":
+            return {
+                ...state,
+                listNguoiDung: action.listNguoiDung,
+            }
         case "CAP_NHAT":
             return {
                 ...state,

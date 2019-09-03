@@ -27,6 +27,23 @@ export const dangNhap = (data, history) => {
             })
     }
 }
+export const layDanhSach = () => {
+    return (dispatch) => {
+        axios
+            .get('http://svcy.myclass.vn/api/QuanLyTrungTam/DanhSachNguoiDung', {
+               
+            })
+            .then(res => {
+               dispatch({
+                   type:"LAY_DANH_SACH",
+                   listNguoiDung:res.data
+               })
+            })
+            .catch(err => {
+                dispatch(layErrors("LAY_ERRORS_DANG_NHAP", err))
+            })
+    }
+}
 
 export const dangXuat = () => {
     return (dispatch) => {
@@ -91,7 +108,7 @@ export const xoaUser = (id) => {
     
     return (dispatch) => {
         axios
-            .delete(`api/QuanLyTrungTam/XoaNguoiDung/${id}`)
+            .delete(`api/QuanLyTrungTam/XoaKhoaHoc/${id}`)
             .then(
               
                 dispatch({
@@ -100,7 +117,7 @@ export const xoaUser = (id) => {
                 })
             )
             .catch(err => {
-                dispatch(layErrors("LAY_ERRORS_CAP_NHAT_THONG_TIN", err))
+                dispatch(layErrors("LAY_ERRORS_XOA", err))
             })
     }
    

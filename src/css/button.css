@@ -6,7 +6,7 @@
     border: 1px solid royalblue;
     font-size: 15px;
     font-weight: bold;
-    transition: all 1s
+    transition: all  0.5s
 }
 .btn_btn_blue:hover {
     
@@ -22,7 +22,7 @@
     border: 1px solid #bf404c;
     font-size: 15px;
     font-weight: bold;
-    transition: all 1s
+    transition: all 0.5s
 }
 .btn_btn_red:hover {
     
@@ -38,7 +38,7 @@
     border: 1px solid #47C9AF;
     font-size: 15px;
     font-weight: bold;
-    transition: all 1s
+    transition: all  0.5s
 }
 .btn_btn_green:hover {
     

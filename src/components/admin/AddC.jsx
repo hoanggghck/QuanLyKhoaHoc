@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Form, FormGroup, Label, Input, Button, Alert } from 'reactstrap';
+import { Container, Form, FormGroup, Input, Alert } from 'reactstrap';
 import { dangKy } from '../../actions/khoaHoc';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
@@ -34,7 +34,7 @@ class AddC extends Component {
 
     render() {
         const { errors } = this.props
-        console.log(this.state);
+        console.log(this.props);
         
 
         const formInput = [

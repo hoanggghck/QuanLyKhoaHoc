@@ -31,8 +31,10 @@ class Add extends Component {
     }
 
 
-
+    
     render() {
+        console.log(this.state);
+        
         const { errors } = this.props
 
 
@@ -74,7 +76,10 @@ class Add extends Component {
                 <Container className="text-left">
                     <Form onSubmit={this.onSubmit}>
                         {inputElm}
+                        
+                               
                         <div className="container-login100-form-btn  mt-4 mb-4">
+                            
                             <button className="login100-form-btn">
                                 Tạo Tài Khoản
                   				</button>

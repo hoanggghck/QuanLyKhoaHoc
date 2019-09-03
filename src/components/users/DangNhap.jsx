@@ -40,36 +40,7 @@ class DangNhap extends Component {
 								{errors.dangNhap}
 							</Alert> : null
 					}
-					{/* 
-				<Container className="text-left">
-					<Form onSubmit={this.onSubmit}>
-						<FormGroup>
-							<Label for="taiKhoan">Tai khoan: </Label>
-							<Input 
-								type="text" 
-								name="taiKhoan" 
-								id="taiKhoan" 
-								placeholder="Nhập tai khoan" 
-								onChange={this.onChange}
-							/>
-						</FormGroup>
-
-						<FormGroup>
-							<Label for="matKhau">Mat khau: </Label>
-							<Input 
-								type="password" 
-								name="matKhau" 
-								id="matKhau" 
-								placeholder="Nhập mat khau" 
-								onChange={this.onChange}
-							/>
-						</FormGroup>
-
-						<Button>Dang nhap</Button>
-					</Form>
-				</Container> */}
-
-
+					
 					<div className="wrap-login100 ">
 						<span className="login100-form-title p-b-51 mb-4">
 							Đăng Nhập

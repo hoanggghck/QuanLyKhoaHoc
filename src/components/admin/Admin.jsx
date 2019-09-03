@@ -5,6 +5,8 @@ import ItemUser from './ItemUser';
 import ItemCourse from './ItemCourse'
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import ReactTable from 'react-table';
+import "react-table/react-table.css";
 class Admin extends Component {
   constructor(props) {
     super(props);
@@ -93,7 +95,7 @@ class Admin extends Component {
                   Course
                     </a>
               </li>
-              <li><Link to="/" >Back</Link></li>
+              
 
             </ul>
            
@@ -115,7 +117,7 @@ class Admin extends Component {
                     {this.state.showTable === "1" ? 
                       (<button className="btn btn_btn_green" ><Link to="/add" >Thêm người dùng</Link></button>) 
                       :(<button className="btn btn_btn_green" ><Link to="/addC" >Thêm khóa học</Link></button>)}
-                      
+                    <button className="btn btn_btn_green"><Link to="/" >Back</Link></button>  
                     </div>
                   </div>
                 </div>

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Form, FormGroup, Label, Input, Button, } from 'reactstrap';
+import {  Form, FormGroup, Label, Input, } from 'reactstrap';
 import { capNhatThongTin } from '../../actions/nguoiDung';
 import { connect } from 'react-redux';
 import '../../css/admin/modal.css';
@@ -8,12 +8,15 @@ class ModalPopup extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            TaiKhoan: "",
-            MatKhau: "",
-            HoTen: "",
-            Email: "",
-            SoDT: "",
-            MaLoaiNguoiDung: "",
+            user: {
+                TaiKhoan: "",
+                MatKhau: "",
+                HoTen: "",
+                Email: "",
+                SoDT: "",
+                MaLoaiNguoiDung: "",
+            },
+            
             Componentstyle:{display:"block"},
 
         }
@@ -36,19 +39,19 @@ class ModalPopup extends Component {
     }
 
     componentDidMount() {
-
+        
+        
         this.setState({
-            TaiKhoan: this.props.TaiKhoan,
-            MatKhau: this.props.MatKhau,
-            HoTen: this.props.HoTen,
-            Email: this.props.Email,
-            SoDT: this.props.SoDT,
-            MaLoaiNguoiDung: this.props.MaLoaiNguoiDung
+            TaiKhoan: this.props.TaiKhoan.TaiKhoan,
+            MatKhau: this.props.TaiKhoan.MatKhau,
+            HoTen: this.props.TaiKhoan.HoTen,
+            Email: this.props.TaiKhoan.Email,
+            SoDT: this.props.TaiKhoan.SoDT,
+            MaLoaiNguoiDung: this.props.TaiKhoan.MaLoaiNguoiDung
         })
     }
     render() {
-        console.log(this.state);
-
+        console.log(this.props.TaiKhoan);
         const formInput = [
             { name: "TaiKhoan", type: "text", label: "tài khoản", disabled: true },
             { name: "MatKhau", type: "text", label: "mật khẩu", disabled: false },

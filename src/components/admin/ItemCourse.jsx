@@ -4,13 +4,16 @@ class ItemCourse extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            course: {
+                HinhAnh: "",
+                LuotXem: "",
+                MaKhoaHoc: "",
+                MoTa: "",
+                NguoiTao: "",
+                TenKhoaHoc: "",
+            },
             showPopup: false,
-            HinhAnh: "",
-            LuotXem: "",
-            MaKhoaHoc: "",
-            MoTa: "",
-            NguoiTao: "",
-            TenKhoaHoc: "",
+           
         }
     }
 
@@ -22,12 +25,15 @@ class ItemCourse extends Component {
 
     componentDidMount() {
         this.setState({
-            HinhAnh: this.props.course.HinhAnh,
-            LuotXem: this.props.course.LuotXem,
-            MaKhoaHoc: this.props.course.MaKhoaHoc,
-            MoTa: this.props.course.MoTa,
-            NguoiTao: this.props.course.NguoiTao,
-            TenKhoaHoc: this.props.course.TenKhoaHoc,
+            course: {...this.state.course,
+                HinhAnh: this.props.course.HinhAnh,
+                LuotXem: this.props.course.LuotXem,
+                MaKhoaHoc: this.props.course.MaKhoaHoc,
+                MoTa: this.props.course.MoTa,
+                NguoiTao: this.props.course.NguoiTao,
+                TenKhoaHoc: this.props.course.TenKhoaHoc,
+            },
+           
         })
     }
     render() {
@@ -49,13 +55,7 @@ class ItemCourse extends Component {
 
                     <Modal
 
-                        HinhAnh={this.state.HinhAnh}
-                        LuotXem={this.state.LuotXem}
-                        MaKhoaHoc={this.state.MaKhoaHoc}
-                        MoTa={this.state.MoTa}
-                        NguoiTao={this.state.NguoiTao}
-                        TenKhoaHoc={this.state.TenKhoaHoc}
-                        text='Click "Close Button" to hide popup'
+                        course = {this.state.course}
                         closePopup={this.togglePopup.bind(this)}
                     />
                     : null

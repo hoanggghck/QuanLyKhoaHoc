@@ -1,70 +1,89 @@
 import React, { Component } from 'react';
 import Modal from './ModalPopup';
-import axios from 'axios';
+import Delete from './Delete'
 class ItemUser extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            user: {
+                TaiKhoan: "",
+                MatKhau: "",
+                HoTen: "",
+                Email: "",
+                SoDT: "",
+                MaLoaiNguoiDung: "",
+            },
             showPopup: false,
-            TaiKhoan: "",
-			MatKhau: "",
-			HoTen: "",
-            Email: "",
-            SoDT: "",
-            MaLoaiNguoiDung: "",
+            showDelete:false,
+           
         };
     }
-    
-        togglePopup() {  
-            this.setState({  
-                showPopup: !this.state.showPopup  
-        });  
-         }  
-        
-         componentDidMount(){
-            this.setState({
+
+    togglePopup() {
+        this.setState({
+            showPopup: !this.state.showPopup
+        });
+    }
+    DeleteCourse() {
+        this.setState({
+            showDelete: !this.state.showDelete
+        })
+    }
+
+    componentDidMount() {
+
+
+        this.setState({
+
+            user: {
+                ...this.state.user,
                 TaiKhoan: this.props.user.TaiKhoan,
-                MatKhau:this.props.user.MatKhau,
+                MatKhau: this.props.user.MatKhau,
                 HoTen: this.props.user.HoTen,
-                Email : this.props.user.Email,
-                SoDT : this.props.user.SoDT,
-                MaLoaiNguoiDung : this.props.user.MaLoaiNguoiDung,
-            })
-         }
-    render() {       
-        
+                Email: this.props.user.Email,
+                SoDT: this.props.user.SoDT,
+                MaLoaiNguoiDung: this.props.user.MaLoaiNguoiDung,
+            },
+        })
+
+    }
+
+    render() {
         const { user } = this.props;
-                    
+        
+        
         return (
-           
-                <tr>
-               <th>{user.HoTen}</th>
-               <th>{user.Email}</th>
-               <th>{user.SoDT}</th>
-               <th>{user.TenLoaiNguoiDung}</th>
-                <th><button className="btn btn_btn_red" >Xóa</button>
-                <button className="btn btn_btn_blue" onClick={this.togglePopup.bind(this)}>Edit</button>
+
+            <tr>
+                <th>{user.HoTen}</th>
+                <th>{user.Email}</th>
+                <th>{user.SoDT}</th>
+                <th>{user.TenLoaiNguoiDung}</th>
+                <th><button className="btn btn_btn_red"  onClick={this.DeleteCourse.bind(this)}>Xóa </button>
+                    <button className="btn btn_btn_blue" onClick={this.togglePopup.bind(this)}>Edit</button>
                 </th>
-              
-                {this.state.showPopup ?  
                
-                    <Modal  
-                           
-                            TaiKhoan= {this.state.TaiKhoan}
-                            MatKhau= {this.state.MatKhau}
-                            HoTen= {this.state.HoTen}
-                            Email= {this.state.Email}
-                            SoDT= {this.state.SoDT}
-                            MaLoaiNguoiDung= {this.state.MaLoaiNguoiDung}
-                              text='Click "Close Button" to hide popup'  
-                              closePopup={this.togglePopup.bind(this)}  
-                    />  
-                    : null  
-                    }  
-                 </tr> 
-                
-               
-         
+                {this.state.showPopup ?
+
+                    <Modal
+
+                        TaiKhoan={this.state.user}
+                        text='Click "Close Button" to hide popup'
+                        closePopup={this.togglePopup.bind(this)}
+                    />
+                    : null
+                }
+                {
+                    this.state.showDelete?
+                    <Delete
+                    user={this.state.user}
+                    />
+                    : null
+                }
+            </tr>
+
+
+
         );
     }
 }

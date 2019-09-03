@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Form, FormGroup, Label, Input, Button, } from 'reactstrap';
+import {  Form, FormGroup, Input,  } from 'reactstrap';
 import { capNhatThongTin } from '../../actions/khoaHoc';
 import { connect } from 'react-redux';
 import '../../css/admin/modal.css';
@@ -38,12 +38,12 @@ class ModalPopupC extends Component {
     componentDidMount() {
 
         this.setState({
-            HinhAnh: this.props.HinhAnh,
-            LuotXem: this.props.LuotXem,
-            MaKhoaHoc: this.props.MaKhoaHoc,
-            MoTa: this.props.MoTa,
-            NguoiTao: this.props.NguoiTao,
-            TenKhoaHoc: this.props.TenKhoaHoc
+            HinhAnh: this.props.course.HinhAnh,
+            LuotXem: this.props.course.LuotXem,
+            MaKhoaHoc: this.props.course.MaKhoaHoc,
+            MoTa: this.props.course.MoTa,
+            NguoiTao: this.props.course.NguoiTao,
+            TenKhoaHoc: this.props.course.TenKhoaHoc
         })
     }
     render() {

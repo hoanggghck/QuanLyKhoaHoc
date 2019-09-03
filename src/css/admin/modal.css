@@ -27,3 +27,19 @@
 .btn{
     margin: 0 20px;
 }
+.delete_item{
+    position: absolute;
+    top: 0;
+    left: 20%;
+    width: 350px;
+    height: 200px;
+    border-radius: 50px;
+    background-color: #c2c2c2;
+    z-index: 10;
+    border: solid 3px #4e4d4d
+}
+.delete_item h1{
+    color: #BF404C;
+    font-size: 22px;
+    margin-top: 30px;
+}

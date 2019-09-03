@@ -1,7 +1,8 @@
 const initialState = {
     dangNhap: "",
     dangKy: "",
-    khoaHoc: ""
+    khoaHoc: "",
+    xoa: ""
 }
 
 const errorsReducer = (state = initialState, action) => {
@@ -12,6 +13,9 @@ const errorsReducer = (state = initialState, action) => {
         
         case "LAY_ERRORS_DANG_KY":
             return {...state, dangKy: action.errors}
+
+        case "LAY_ERRORS_XOA":
+            return { ...state, xoa: action.errors }  
 
         case "LAY_ERRORS_KHOA_HOC":
             return {...state, khoaHoc: action.errors}    
